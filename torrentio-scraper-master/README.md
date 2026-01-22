@@ -11,6 +11,13 @@ The `addon/` directory includes a Home Assistant add-on definition for HAOS amd6
 2. Add the repository URL that contains this project.
 3. Install **Torrentio Scraper** from the add-on store.
 
+### Build & run in Home Assistant
+Home Assistant builds the add-on for you when you install it from the Add-on Store. To build and run it locally on HAOS (amd64):
+1. After adding the repository, open the **Torrentio Scraper** add-on page.
+2. Click **Install** to build the image on your HAOS host.
+3. Once the build completes, set any **Configuration** options you need and click **Start**.
+4. Use **Open Web UI** (ingress) or access `http://<home-assistant-ip>:7000/` if you enabled the port.
+
 ### Configuration
 You can configure the add-on options in the UI:
 - `port`: The internal HTTP port (default `7000`).
