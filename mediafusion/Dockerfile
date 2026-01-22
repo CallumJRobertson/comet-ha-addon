@@ -138,9 +138,12 @@ COPY rootfs /
 # Copy run script
 COPY run.sh /run.sh
 
-# Make scripts executable
+# Make scripts executable and ensure s6-overlay permissions are preserved
 RUN chmod +x /etc/cont-init.d/* \
-    && chmod +x /run.sh
+    && chmod +x /run.sh \
+    && chmod +x /init 2>/dev/null || true \
+    && chmod -R +x /etc/s6-overlay 2>/dev/null || true \
+    && chmod -R +x /etc/services.d 2>/dev/null || true
 
 WORKDIR /app/mediafusion
 
