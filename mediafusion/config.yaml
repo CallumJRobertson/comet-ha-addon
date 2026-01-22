@@ -83,9 +83,6 @@ ingress_stream: true
 panel_icon: "mdi:movie-open"
 panel_title: "MediaFusion"
 
-# Labels for identification
-image: "ghcr.io/{arch}-addon-mediafusion"
-
 # Build configuration
 build_from:
   amd64: "ghcr.io/home-assistant/amd64-base-python:3.12-alpine3.20"
